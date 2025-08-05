@@ -9,7 +9,8 @@ ou
 
 # Estudo
 
--Node é o ambiente ou Runtime que roda o Js no terminal, localhost ou servidor.
+- Node é o ambiente ou Runtime que roda o Js no terminal, localhost ou servidor.
+- Como mudar o formato de importação/exportação de Require para Import // "type": "module", no Package.json.
 
 # Tópicos importantes
 
