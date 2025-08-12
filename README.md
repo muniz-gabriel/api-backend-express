@@ -5,6 +5,7 @@
 - npm install 
 ou 
     npm i // instala todos os pacotes do package.json
+- npm run nome_do_script // executa 
 
 
 # Estudo
@@ -21,3 +22,14 @@ ou
 - O que é Express
 - Protocolo http
 - Métodos http (GET, POST, PUT, PATCH, DELETE)
+- watch (parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado)
+
+Sintaxe básica de uma rota da API
+
+app.post('/produto', (req, res) => {
+    res.json({message: 'Criado com sucesso!'})
+})
+
+- método criar ou inserir: post
+- Rota ou endereço: /produto
+- tipo de resposta: json
