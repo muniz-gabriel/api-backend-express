@@ -23,6 +23,7 @@ ou
 - Protocolo http
 - Métodos http (GET, POST, PUT, PATCH, DELETE)
 - watch (parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado)
+- Router (Para que separar as rotas?)
 
 Sintaxe básica de uma rota da API
 
@@ -33,3 +34,6 @@ app.post('/produto', (req, res) => {
 - método criar ou inserir: post
 - Rota ou endereço: /produto
 - tipo de resposta: json
+
+- Para que serve o Router no express? 
+-Organização do código e facilitar a manutenção dos métodos.
