@@ -24,6 +24,7 @@ ou
 - Métodos http (GET, POST, PUT, PATCH, DELETE)
 - watch (parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado)
 - Router (Para que separar as rotas?)
+- O que é um padrão de projeto? 
 
 Sintaxe básica de uma rota da API
 
@@ -37,3 +38,8 @@ app.post('/produto', (req, res) => {
 
 - Para que serve o Router no express? 
 -Organização do código e facilitar a manutenção dos métodos.
+- O que é um padrão de projeto? = É uma forma de organizar/codificar que é amplamente conhecida.
+- MVC (Model View Controler) - Padrão de projeto que organiza o código, dividindo em 3 camadas.
+ Model: acesso e manipulação ao banco de dados e definir as regras de negócio;
+View: Visualização que o User vai interagir, o Front-end;
+Controler: controla Entrada, Processamento e Saída de dados.

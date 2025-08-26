@@ -1,42 +1,17 @@
 import express from 'express';
+import { createSupplierController } from '../controllers/supplier/createSupplierController.js';
+import { listSupplierController } from '../controllers/supplier/listSupplierController.js';
+import { getByIdSupplierController } from '../controllers/supplier/getByIdSupplierController.js';
+import { editSupplierController } from '../controllers/supplier/editSupplierController.js';
+import { deleteSupplierController } from '../controllers/supplier/deleteSupplierController.js';
+
 
 const router = express.Router();
 
-router.post('/', (req, res) => {
-    const dados = req.body
-    console.log('Foi feito um POST em produto') 
-    res.json({ 
-        message: 'Supplier cadastrado com sucesso',
-        supplier: dados
-    })
-})
-
-// Lista todos os products
-router.get('/', (req, res) => {
-    res.json({ message: 'Suppliers consultados com sucesso!' })
-})
-
-// Consulta um product específico
-router.get('/:id', (req, res) => {
-    const id = req.params.id
-    res.json({ message: `Supplier com ID ${id} consultado com sucesso!` })
-})
-
-// Atualiza um product específico
-router.put('/:id', (req,res) => {
-    const id = req.params.id
-    const dados = req.body
-    console.log('Foi feito um PUT em /produto')
-    res.json({ 
-        message: 'Supplier editado com sucesso!',
-        supplier: dados
-    })
-})
-
-// Deleta um product específico
-router.delete('/:id', (req, res) => {
-    const id = req.params.id
-    res.json({ message: `Supplier com ID ${id} deletado com sucesso!` })
-})
+router.post('/', createSupplierController)
+router.get('/', listSupplierController)
+router.get('/:id', getByIdSupplierController)
+router.put('/:id', editSupplierController)
+router.delete('/:id', deleteSupplierController)
 
 export default router;
