@@ -25,8 +25,10 @@ ou
 - watch (parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado)
 - Router (Para que separar as rotas?)
 - O que é um padrão de projeto? 
+- ORM. Por que usar ORM?
+- Qual a diferenças das Dependências Desenvolvimento e Dev?
 
-Sintaxe básica de uma rota da API
+# Sintaxe básica de uma rota da API
 
 app.post('/produto', (req, res) => {
     res.json({message: 'Criado com sucesso!'})
@@ -43,3 +45,22 @@ app.post('/produto', (req, res) => {
  Model: acesso e manipulação ao banco de dados e definir as regras de negócio;
 View: Visualização que o User vai interagir, o Front-end;
 Controler: controla Entrada, Processamento e Saída de dados.
+- ORM (Object Relational Model) - Uma forma de relacionar o Objeto do JS com o banco de dados; Ele facilita a  modificação/alterar a base de dados e de executar os comandos.
+- Dependências são recursos utilizados dentro do projeto e Dependências Dev são recurasos utilizados como ferramentas complementares para ajudar no projeto.
+
+# Comandos do Prisma
+- Instalação do Prisma 
+    - npm i prisma -D
+    - npm i @prisma/client
+
+- Inicializar o Prisma
+    - npx prisma init
+
+- Gerar o model do prisma a partir de um BD existente
+    - npx prisma db pull
+
+- Gerar o BD a partir de um model do prisma
+    - npx prisma db push
+
+- Gerar os arquivos necessários para usar o prisma client no código
+    - npx prisma generate

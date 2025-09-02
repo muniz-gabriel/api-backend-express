@@ -1,8 +1,11 @@
-export const createProfileController = (req, res) => {
-    const dados = req.body
-    console.log('Foi feito um POST em profile') 
+import { create } from '../../models/profileModel.js'
+
+export const createProfileController = async (req, res) => {
+    const profile = req.body
+    const result = await create(profile)
+
     res.json({ 
-        message: 'Usuário cadastrado com sucesso',
-        profile: dados
+        message: 'Usuário criado com sucesso',
+        profile: result
     })
 }
