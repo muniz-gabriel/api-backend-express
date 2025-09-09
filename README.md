@@ -50,7 +50,7 @@ Controler: controla Entrada, Processamento e Saída de dados.
 
 # Comandos do Prisma
 - Instalação do Prisma 
-    - npm i prisma -D
+    - npm i prisma -D (save.dev pra salvar em dependência dev)
     - npm i @prisma/client
 
 - Inicializar o Prisma
