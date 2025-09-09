@@ -5,7 +5,7 @@ export const getByIdProfileController = async (req, res) => {
 
     const result = await getById(+id)
 
-    res.json({ message: 'Usuário com ID ${id} consultado com sucesso!',
+    res.json({ message: `Usuário com ID ${id} consultado com sucesso!`,
     profile: result
     })
 }

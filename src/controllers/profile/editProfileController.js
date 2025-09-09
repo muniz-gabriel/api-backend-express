@@ -6,7 +6,7 @@ export const editProfileController = async (req,res) => {
 
     const result = await update(+id, profile)
 
-    console.log('Foi feito um PUT em /produto')
+    console.log('Foi feito um PUT em /profile')
     res.json({ 
         message: 'Usuário editado com sucesso!',
         profile: result
