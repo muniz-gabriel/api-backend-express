@@ -27,8 +27,10 @@ ou
 - O que é um padrão de projeto? 
 - ORM. Por que usar ORM?
 - Qual a diferenças das Dependências Desenvolvimento e Dev?
+- Padrão de Projeto Middleware
 
 # Sintaxe básica de uma rota da API
+
 
 app.post('/produto', (req, res) => {
     res.json({message: 'Criado com sucesso!'})
@@ -39,14 +41,15 @@ app.post('/produto', (req, res) => {
 - tipo de resposta: json
 
 - Para que serve o Router no express? 
--Organização do código e facilitar a manutenção dos métodos.
+- Organização do código e facilitar a manutenção dos métodos.
 - O que é um padrão de projeto? = É uma forma de organizar/codificar que é amplamente conhecida.
 - MVC (Model View Controler) - Padrão de projeto que organiza o código, dividindo em 3 camadas.
  Model: acesso e manipulação ao banco de dados e definir as regras de negócio;
 View: Visualização que o User vai interagir, o Front-end;
 Controler: controla Entrada, Processamento e Saída de dados.
 - ORM (Object Relational Model) - Uma forma de relacionar o Objeto do JS com o banco de dados; Ele facilita a  modificação/alterar a base de dados e de executar os comandos.
-- Dependências são recursos utilizados dentro do projeto e Dependências Dev são recurasos utilizados como ferramentas complementares para ajudar no projeto.
+- Dependências são recursos utilizados dentro do projeto e Dependências Dev são recursos utilizados como ferramentas complementares para ajudar no projeto.
+- Middleware é um Padrão de Projeto que separa/organiza uma sequência de funções, ou um fluxo de execução; onde cada uma dessas funções ganha o nome de Middleware, e, após executarem sua função, passam para o próximo middleware.
 
 # Comandos do Prisma
 - Instalação do Prisma 

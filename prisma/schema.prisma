@@ -19,6 +19,7 @@ model user {
   name      String   @db.VarChar(255)
   email     String   @unique(map: "email") @db.VarChar(255)
   pass      String   @db.VarChar(255)
+  avatar    String?  @db.Text
 }
 
 model product {
@@ -26,4 +27,10 @@ model product {
   name        String   @db.VarChar(255)
   description String   @db.VarChar(255)
   price       Float
+}
+
+model supplier {
+  id      Int      @id @default(autoincrement())
+  name    String   @db.VarChar(255)
+  contact String   @db.VarChar(255)
 }
