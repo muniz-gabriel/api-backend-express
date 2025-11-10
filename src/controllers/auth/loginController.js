@@ -34,7 +34,6 @@ export const loginController = async (req, res) => {
             email: user.email,
             avatar: user.avatar,
         },
-    });
-
-    return
+        token
+    })
 }

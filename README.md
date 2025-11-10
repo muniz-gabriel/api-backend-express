@@ -67,3 +67,7 @@ Controler: controla Entrada, Processamento e Saída de dados.
 
 - Gerar os arquivos necessários para usar o prisma client no código
     - npx prisma generate
+
+- SE EU TROCAR O SEGREDO O QUE ACONTECE COM OS USERS LOGADOS NO SISTEMA? = PERDEM ACESSO DO SISTEMA, PRECISA GERAR OUTRO TOKEN, ELES VÃO DESLOGAR DO SISTEMA
+
+- Jwt. Quando a pesoa cadstra, gera senha que foi pro banco (hash). Quando ela loga bate e gera o jwt (token), nesse jwt guarda info do user, (id e email), e esse token garante que as info sejam do user. 
