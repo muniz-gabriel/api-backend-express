@@ -1,6 +1,7 @@
 import { getById, validateProfile } from "../../models/profileModel.js"
 
-export const getByIdProfileController = async (req, res) => {
+export const getByIdProfileController = async (req, res, next) => {
+    try {
     const id = req.params.id
 
     const validation = validateProfile({ id: +id }, { name: true, email: true, pass: true })
@@ -16,4 +17,8 @@ export const getByIdProfileController = async (req, res) => {
         message: `Usuário com ID ${id} consultado com sucesso!`,
         profile: result
     })
+
+    } catch (error) {
+        next(error)
+    }
 }

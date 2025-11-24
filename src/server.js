@@ -6,11 +6,11 @@ import supplierRouter from './routers/supplierRouter.js'
 import carRouter from './routers/carRouter.js'
 import cors from 'cors'
 import { logger } from './middlewares/logger.js'
-
+import { errorHandler } from './middlewares/errorHandler.js'
+import { error404 } from './controllers/error404.js'
 
 const app = express()
 const port = 3000
-
 
 app.use(logger)
 app.use(cors()) // Habilita o CORS para todas as rotas e origens
@@ -23,6 +23,8 @@ app.use('/product', productRouter)
 app.use('/supplier', supplierRouter)
 app.use('/car', carRouter)
 
+app.use(error404)
+app.use(errorHandler)
 
 app.listen(port, () => {
     console.log(`API rodando em http://localhost:${port}`)

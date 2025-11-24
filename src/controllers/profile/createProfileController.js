@@ -25,6 +25,7 @@ export const createProfileController = async (req, res, next) => {
         profile: result
     })
 
-} catch (error) {
-    return next(error)
-}}
+    } catch (error) {
+        next(error)
+    }
+}

@@ -1,6 +1,7 @@
 import { remove, validateProfile } from '../../models/profileModel.js'
 
-export const deleteProfileController = async(req, res) => {
+export const deleteProfileController = async(req, res, next) => {
+    try {
     const id = req.params.id
 
     //id vem da url como String, precisa converter para Number
@@ -21,4 +22,8 @@ export const deleteProfileController = async(req, res) => {
     res.json({message: `Usuário com ID ${id} deletado com sucesso!`,
         profile: result
     })
+    
+    } catch (error) {
+        next(error)
+    }
 }
