@@ -28,9 +28,11 @@ ou
 - ORM. Por que usar ORM?
 - Qual a diferenças das Dependências Desenvolvimento e Dev?
 - Padrão de Projeto Middleware
+- Autenticação e login de Usuários
+- Validação de Dados (Regras de Negócio) com Zod
+- ErroHandler (Middleware para tratamento de erros da api)
 
 # Sintaxe básica de uma rota da API
-
 
 app.post('/produto', (req, res) => {
     res.json({message: 'Criado com sucesso!'})
